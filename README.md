@@ -48,7 +48,7 @@ Paso 19: Ubicar request en JSON:
   
   "nombre": "Camiseta deportiva",
   
-  "precio": 45000,
+  "precio": 45000
   
 }
 
