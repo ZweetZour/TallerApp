@@ -35,6 +35,8 @@ def add_producto():
             productos.append(nuevo_producto)
             return jsonify(nuevo_producto), 201
 
+@app.route("/api/productos/<int:id>", methods = ['PUT'])
+
 def update_producto(id):
     producto = next((p for p in productos if p["id"] == id), None)
     if producto:
@@ -43,6 +45,8 @@ def update_producto(id):
         return jsonify(producto)
     else:
         return jsonify({"error": "Producto no encontrado"}), 404
+
+@app.route("/api/productos/<int:id>", methods = ['DELETE'])
 
 def delete_producto(id):
     producto = next((p for p in productos if p["id"] == id), None)
